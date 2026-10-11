@@ -25,7 +25,6 @@ if %ERRORLEVEL% NEQ 0 (
     goto :error
 )
 strip -s zerosnip.exe
-copy /Y zerosnip.exe ..\releases\zerosnip.exe >nul
 copy /Y zerosnip.exe ..\installer\zerosnip.exe >nul
 
 echo [2/3] Compiling standalone uninstaller (uninstall.exe) ...
@@ -60,8 +59,7 @@ cd ..
 echo.
 echo ===================================================
 echo   BUILD SUCCESSFUL!
-echo   Binaries placed in releases/:
-echo     - zerosnip.exe (Standalone Portable, ~1.1 MB)
+echo   Installer placed in releases/:
 echo     - zerosnip-setup.exe (GUI Installer, ~2.4 MB)
 echo ===================================================
 goto :end

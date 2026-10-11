@@ -69,9 +69,6 @@ Zero Snip is written from the ground up in modern native C++20 using Win32 and G
 ### 5. 🔕 Silent Background Daemon & Painless Startup
 Zero Snip can be added to Windows Startup via the included GUI installer or directly from the system tray menu. It creates an elevated Windows Task Scheduler task (`schtasks /sc onlogon /rl highest`) so it starts silently with Windows on boot with full permissions **without triggering annoying UAC prompts** on every restart.
 
-### 6. 🎨 Obsidian Dark Aesthetic (Zero Transparent Slop)
-Featuring a deep matte obsidian canvas (`#0d0d12`), DWM immersive dark mode title bars, smooth rounded rectangle cards, and floating drop shadows. No blurry transparent artifacts or jarring Windows borders.
-
 ---
 
 ## ⌨️ Default Shortcuts
@@ -99,15 +96,10 @@ Featuring a deep matte obsidian canvas (`#0d0d12`), DWM immersive dark mode titl
 
 ## 📥 Installation
 
-### Option A: Standalone GUI Installer (Recommended)
-1. Download **`zerosnip-setup.exe`** from the [releases](releases/) folder.
+1. Download **`zerosnip-setup.exe`** from the [Releases](https://github.com/REEZER53246/Zero-Snip/releases) or the [`releases/`](releases/) folder.
 2. Run the installer (requests Administrator privileges to configure startup and elevated capture).
 3. Choose whether to enable **Start with Windows** on boot (with live status confirmation).
 4. Click **Install Now**. Zero Snip installs to `C:\Program Files\Zero Snip` and starts running silently in your system tray immediately!
-
-### Option B: Portable Mode
-1. Download **`zerosnip.exe`** from [releases](releases/).
-2. Place it in any directory of your choice and run it. It runs completely standalone with zero external DLLs required.
 
 ---
 
@@ -130,7 +122,7 @@ This single command will:
 2. Compile and link `src/*.cpp` into `zerosnip.exe` (stripped to ~1.1 MB).
 3. Compile `src/uninstall.cpp` into standalone `uninstall.exe`.
 4. Compile `installer/installer_main.cpp` into `zerosnip-setup.exe` (embedding `zerosnip.exe`, `uninstall.exe`, and high-res logos).
-5. Place both release-ready executables into `releases/`.
+5. Place the release-ready installer into `releases/`.
 
 ---
 
@@ -148,7 +140,6 @@ git/
 │   ├── installer.rc             # Resource script embedding payload binaries & logo
 │   └── build_installer.bat      # Installer-specific build script
 ├── releases/
-│   ├── zerosnip.exe             # Standalone portable binary (~1.1 MB)
 │   └── zerosnip-setup.exe       # Complete standalone GUI installer (~2.4 MB)
 ├── src/
 │   ├── main.cpp                 # Entry point, single-instance mutex, DPI awareness
