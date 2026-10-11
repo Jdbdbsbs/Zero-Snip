@@ -1,0 +1,16 @@
+# Build objects and intermediates
+*.o
+*.obj
+*.res
+*.log
+*.old
+*.tmp
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Keep compiled releases in releases/
+!releases/*.exe
