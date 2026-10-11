@@ -12,5 +12,6 @@
 *.suo
 *.user
 
-# Keep compiled releases in releases/
+# Compiled executables
+*.exe
 !releases/*.exe
